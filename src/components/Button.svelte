@@ -6,12 +6,13 @@
     export let type: ButtonStyle = 'primary';
     export let rounded: boolean = true;
     export let isIcon: boolean = false;
+    export let disabled: boolean = false;
 
 </script>
 
 
 
-<button on:click transition:scale class:icon={isIcon} style="border-radius: {rounded ? '8px' : '0px'}" class:flat={!flat} class:outlined={outlined} class={type}>
+<button on:click disabled={disabled} transition:scale class:icon={isIcon} style="border-radius: {rounded ? '8px' : '0px'}" class:flat={!flat} class:outlined={outlined} class={type}>
     <slot />
 </button>
 

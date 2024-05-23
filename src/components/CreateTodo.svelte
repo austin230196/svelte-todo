@@ -11,8 +11,15 @@
         category: '',
         due_date: ''
     } 
+    let valid = false;
 
     function addTodoHandler(){
+        if(Object.values(formstate).some(s => s.trim() === "")){
+            valid = false;
+        }else {
+            valid = true;
+        }
+        console.log({valid});
         dispatch("addTodo", formstate);
     }
 </script>
@@ -37,6 +44,6 @@
         <input class="border border-gray rounded-md outline-none p-2" id="due" type="date" placeholder="Enter due date" bind:value={formstate.due_date} />
     </div>
     <div class="w-full flex flex-col gap-1 mt-4">
-        <Button on:click={addTodoHandler}>Create</Button>
+        <Button disabled={!valid} on:click={addTodoHandler}>Create</Button>
     </div>
 </div>
