@@ -22,7 +22,6 @@
     "vite": "^5.2.0"
   },
   "dependencies": {
-    "flowbite-svelte": "^0.46.1",
     "svelte-icons-pack": "^3.1.3"
   }
 }

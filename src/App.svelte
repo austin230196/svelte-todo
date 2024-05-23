@@ -2,7 +2,6 @@
   import {onMount} from "svelte";
   import { Icon } from 'svelte-icons-pack';
   import { IoAddCircle } from "svelte-icons-pack/io";
-  import {Tooltip} from "flowbite-svelte";
   
   import {Header, Button, Todo, Modal, CreateTodo} from "./components";
   import todos from "./stores/todos";
@@ -74,7 +73,6 @@
           <Icon src={IoAddCircle} size="2rem" />
         </span>
       </Button>
-      <Tooltip type="dark" placement="bottom">Create a new todo</Tooltip>
     </div>
   </div>
 </main>
