@@ -1,5 +1,6 @@
 <script lang="ts">
   import {onMount} from "svelte";
+  import {flip} from "svelte/animate";
   import { Icon } from 'svelte-icons-pack';
   import { IoAddCircle } from "svelte-icons-pack/io";
   
@@ -63,7 +64,9 @@
   <Header />
   <div class="max-w-[calc(100%-0.25rem)] sm:max-w-[500px] border border-t-0 border-blue p-5 mx-auto">
     {#each $todos as todo, i (todo.id)}
-      <Todo {todo} on:updateTodo={updateTodoHandler} />
+      <div animate:flip={{duration:800}}>
+        <Todo {todo} on:updateTodo={updateTodoHandler} />
+      </div>
     {:else}
       <h1 class="text-center">No todos found.</h1>
     {/each}
