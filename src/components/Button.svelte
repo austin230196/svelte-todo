@@ -24,6 +24,12 @@
         transition: all 0.5s ease-out;
         font-weight: 600;
         letter-spacing: 0.6px;
+        opacity: 1;
+
+        &:disabled {
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
     }
 
     button:hover {

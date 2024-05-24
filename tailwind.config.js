@@ -13,7 +13,11 @@ export default {
       'gray': '#8492a6',
       'gray-light': '#d3dce6',
       'white': '#fff',
-      'backdrop': 'rgba(0,0,0,.3)'
+      'backdrop': 'rgba(0,0,0,.3)',
+      'error': '#ED1C24'
+    },
+    fontSize: {
+      'sm': '0.6rem'
     },
     fontFamily: {
       sans: ['Graphik', 'sans-serif'],
