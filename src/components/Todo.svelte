@@ -29,7 +29,7 @@
 
 
 <div class="w-full border-2 mb-2 border-gray-300 rounded-md flex items-center gap-4 p-2 cursor-pointer">
-    <input type="checkbox" checked={todo.completed} on:change={e => changeTodoHandler(e, todo.id)} />
+    <input type="checkbox" checked={todo.completed} on:change={e => changeTodoHandler(e, todo?.id ? todo?.id : 0)} />
     <section class="">
         <h3 class:completed={todo.completed}>{todo.title}</h3>
         <p class:completed={todo.completed}>{todo.description}</p>
@@ -48,5 +48,14 @@
 
     .completed {
         text-decoration: line-through;
+    }
+
+    input {
+        cursor: pointer;
+    }
+
+    p {
+        color: theme('colors.gray');
+        font-size: 0.8rem;
     }
 </style>

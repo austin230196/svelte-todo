@@ -24,6 +24,10 @@
         transition: all 0.5s ease-out;
         font-weight: 600;
         letter-spacing: 0.6px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         opacity: 1;
 
         &:disabled {

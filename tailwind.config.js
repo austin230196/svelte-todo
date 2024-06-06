@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class',
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
     colors: {
@@ -13,6 +14,7 @@ export default {
       'gray': '#8492a6',
       'gray-light': '#d3dce6',
       'white': '#fff',
+      'black': '#000',
       'backdrop': 'rgba(0,0,0,.3)',
       'error': '#ED1C24'
     },

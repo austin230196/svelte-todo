@@ -1,0 +1,1 @@
+export const THEME = 'todos-theme';

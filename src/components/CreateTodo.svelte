@@ -1,5 +1,6 @@
 <script lang="ts">
     import {createEventDispatcher} from "svelte";
+    import {fade, blur, slide, fly, scale, draw} from "svelte/transition";
     
     import { Button } from "./";
 
@@ -42,7 +43,7 @@
 </script>
 
 
-<div class="max-w-[calc(100%-0.25rem)] min-w-[350px] sm:max-w-[500px] py-10 px-5 mx-auto mt-20 rounded-md bg-white flex flex-col items-center">
+<div in:scale={{delay: 250, duration: 300}} out:slide={{axis: 'x'}} class="max-w-[calc(100%-0.25rem)] min-w-[350px] sm:max-w-[500px] py-10 px-5 mx-auto rounded-md bg-white flex flex-col items-center">
     <h2 class="mb-5 uppercase font-extrabold text-xl">New Todo</h2>
     <div class="w-full flex flex-col gap-1 mb-4">
         <label for="title" class="font-bold">Title</label>
